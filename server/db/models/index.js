@@ -13,13 +13,13 @@ Product.hasMany(LineItem);
 LineItem.belongsTo(Transaction);
 Transaction.hasMany(LineItem);
 
+//Make separate table for inventory for future flexibility
 Product.belongsTo(Inventory);
-Inventory.hasMany(Product);
 
-module.exports = { 
+module.exports = {
     User,
-    Transaction, 
-    Product, 
-    Inventory, 
+    Transaction,
+    Product,
+    Inventory,
     LineItem
 };

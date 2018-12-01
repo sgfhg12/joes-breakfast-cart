@@ -11,4 +11,4 @@ const Inventory = db.define('inventory', {
     }
 });
 
-module.exports = Inventory; 
+module.exports = Inventory;
