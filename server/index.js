@@ -4,7 +4,7 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const path = require('path');
 const db = require('./db');
-const port = process.env.PORT || 3001; 
+const port = process.env.PORT || 3001;
 
 // set up morgan for logging middleware + bodyparser for parsing request bodies
 app.use(morgan('dev'));
@@ -23,6 +23,7 @@ app.listen(port, () => {
 //requiring api routes
 app.use('/api', require('./api'));
 
-db.sync({force:true}).catch(err => console.log(err));
+//syncing database
+db.sync().catch(err => console.log(err));
 
 module.exports = app;
