@@ -4,7 +4,7 @@ const inventoryRouter = require('./inventory');
 const transactionRouter = require('./transactions')
 
 //set up api routes
-router.use('/transactions', transactionRouter)
+router.use('/transactions', transactionRouter);
 router.use('/users', userRouter);
 router.use('/inventory', inventoryRouter);
 
